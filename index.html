@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special anniversary website for Saksham and Yashica">
+    <title>One Month of Us ♡</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Music Control -->
+    <div class="music-control">
+        <button id="musicToggle" class="music-btn" aria-label="Toggle music">♫</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">♡</div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#our-month" class="nav-link">Our Month</a></li>
+                <li><a href="#memories" class="nav-link">Memories</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+                <li><a href="#letter" class="nav-link">Letter</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="hydrangea-decorations">
+            <svg class="hydrangea" viewBox="0 0 100 100" style="left: 5%; top: 10%;">
+                <g class="hydrangea-flower">
+                    <circle cx="30" cy="30" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="40" cy="25" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="50" cy="30" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="35" cy="40" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="45" cy="42" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="32" cy="50" r="3" fill="#DDA0DD" opacity="0.6"/>
+                    <circle cx="42" cy="52" r="3" fill="#DDA0DD" opacity="0.6"/>
+                    <circle cx="38" cy="35" r="2" fill="#FFFFFF" opacity="0.9"/>
+                </g>
+            </svg>
+            <svg class="hydrangea" viewBox="0 0 100 100" style="right: 5%; top: 15%;">
+                <g class="hydrangea-flower">
+                    <circle cx="30" cy="30" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="40" cy="25" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="50" cy="30" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="35" cy="40" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="45" cy="42" r="3" fill="#FFB6D9" opacity="0.8"/>
+                    <circle cx="32" cy="50" r="3" fill="#DDA0DD" opacity="0.6"/>
+                    <circle cx="42" cy="52" r="3" fill="#DDA0DD" opacity="0.6"/>
+                    <circle cx="38" cy="35" r="2" fill="#FFFFFF" opacity="0.9"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">One Month of Us</h1>
+            <p class="hero-subtitle">Saksham ♡ Yashica</p>
+            <p class="hero-date">01.09.2026 • 12:20 AM</p>
+            
+            <div class="anniversary-countdown">
+                <p id="countdownText">Something special is almost here...</p>
+                <div id="countdownTimer" class="countdown-timer"></div>
+            </div>
+
+            <button class="enter-btn" id="enterBtn">Enter Our Little World ♡</button>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="hidden">
+        <div class="container">
+            <h2>A Little Something For You</h2>
+            <div class="message-container">
+                <p class="anniversary-message">Dear Yashica,</p>
+                <p class="anniversary-message">One month may sound small in the grand scheme of things, but every single moment with you has been something special. From the very beginning, you've brought a kind of warmth into my life that I didn't expect.</p>
+                <p class="anniversary-message">These past 30 days have been filled with conversations that made me laugh, moments that felt completely natural, and memories that I'll keep close to my heart. You've shown me what it means to be genuinely cared for, and I hope I've done the same for you.</p>
+                <p class="anniversary-message">Thank you for being patient, kind, and simply... you. Here's to celebrating this little milestone, and to all the moments yet to come.</p>
+                <p class="anniversary-message" style="margin-top: 2rem;">With all my heart,<br><span style="font-style: italic;">Saksham</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="our-month" class="timeline-section">
+        <div class="container">
+            <h2>Our First Month</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-milestone="0">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>The Beginning</h3>
+                        <p>Where everything started.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-milestone="1">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>The First Few Days</h3>
+                        <p>Getting to know each other a little more.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-milestone="2">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>The Random Moments</h3>
+                        <p>The conversations, jokes and tiny memories.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-milestone="3">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>One Month</h3>
+                        <p>And somehow, here we are.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline Modal -->
+        <div class="modal" id="milestoneModal">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <h3 id="milestoneTitle"></h3>
+                <p id="milestoneText"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories" class="scrapbook-section">
+        <div class="container">
+            <h2>Little Pieces of Us</h2>
+            <div class="scrapbook-container" id="scrapbookContainer">
+                <!-- Photos will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section">
+        <div class="container">
+            <h2>Let's Play</h2>
+
+            <!-- Game 1: Heart Catcher -->
+            <div class="game-card" id="gameCard1">
+                <h3>Catch the Hearts</h3>
+                <p class="game-instructions">Catch 10 hearts before time runs out!</p>
+                <div class="game-stats">
+                    <span>Score: <strong id="heartScore">0</strong>/10</span>
+                    <span>Time: <strong id="heartTimer">30</strong>s</span>
+                </div>
+                <div class="game-container" id="heartGame"></div>
+                <button class="game-btn" id="heartGameBtn">Start Game</button>
+                <p id="heartGameMessage" class="game-message"></p>
+            </div>
+
+            <!-- Game 2: Memory Match -->
+            <div class="game-card" id="gameCard2">
+                <h3>Perfect Match</h3>
+                <p class="game-instructions">Match all the pairs!</p>
+                <div class="game-stats">
+                    <span>Pairs: <strong id="matchScore">0</strong>/8</span>
+                    <span>Moves: <strong id="matchMoves">0</strong></span>
+                </div>
+                <div class="memory-grid" id="memoryGrid"></div>
+                <button class="game-btn" id="matchGameBtn">Start Game</button>
+                <p id="matchGameMessage" class="game-message"></p>
+            </div>
+
+            <!-- Game 3: Find the Hidden Heart -->
+            <div class="game-card" id="gameCard3">
+                <h3>There's Something Hidden Here...</h3>
+                <p class="game-instructions">Find the hidden heart in the garden!</p>
+                <div class="hidden-heart-container" id="hiddenHeartContainer">
+                    <svg viewBox="0 0 800 400" class="garden-scene">
+                        <defs>
+                            <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFE4F5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FFF0F8;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="800" height="400" fill="url(#skyGradient)"/>
+                        
+                        <!-- Decorative flowers and plants -->
+                        <circle cx="100" cy="300" r="40" fill="#FFB6D9" opacity="0.6"/>
+                        <circle cx="130" cy="280" r="35" fill="#FFB6D9" opacity="0.7"/>
+                        <circle cx="700" cy="320" r="45" fill="#FFB6D9" opacity="0.5"/>
+                        <circle cx="670" cy="290" r="40" fill="#FFB6D9" opacity="0.6"/>
+                        
+                        <!-- Hidden heart (will be made clickable) -->
+                        <g id="hiddenHeart" class="hidden-heart-svg" style="cursor: pointer; opacity: 0.3;">
+                            <path d="M400,250 C400,250 380,230 360,230 C340,230 330,245 330,260 C330,290 400,350 400,350 C400,350 470,290 470,260 C470,245 460,230 440,230 C420,230 400,250 400,250 Z" fill="#FF69B4" opacity="0.8"/>
+                        </g>
+                    </svg>
+                </div>
+                <p id="hiddenHeartMessage" class="game-message"></p>
+            </section>
+
+    <!-- Hidden Message Section -->
+    <section id="secret" class="secret-section hidden">
+        <div class="container">
+            <div class="secret-flower-container">
+                <svg class="secret-flower" id="secretFlower" viewBox="0 0 200 200" style="cursor: pointer;">
+                    <g class="hydrangea-flower">
+                        <circle cx="100" cy="60" r="5" fill="#FFB6D9"/>
+                        <circle cx="130" cy="80" r="5" fill="#FFB6D9"/>
+                        <circle cx="70" cy="80" r="5" fill="#FFB6D9"/>
+                        <circle cx="130" cy="130" r="5" fill="#FFB6D9"/>
+                        <circle cx="70" cy="130" r="5" fill="#FFB6D9"/>
+                        <circle cx="100" cy="150" r="5" fill="#DDA0DD"/>
+                        <circle cx="100" cy="100" r="4" fill="#FFFFFF" opacity="0.9"/>
+                    </g>
+                </svg>
+            </div>
+            <p class="secret-hint">Click the flower... (multiple times)</p>
+        </div>
+    </section>
+
+    <!-- Secret Modal -->
+    <div class="modal" id="secretModal">
+        <div class="modal-content secret-message">
+            <button class="modal-close">&times;</button>
+            <h2>You Found Something...</h2>
+            <p>Yashica, if you found this, it means you were curious enough to explore everything. And honestly... that's one of the things I love about you. ♡</p>
+            <p style="margin-top: 2rem; font-weight: bold;">Happy one month, Yashica.</p>
+            <p style="font-style: italic;">— Saksham</p>
+        </div>
+    </div>
+
+    <!-- Letter Section -->
+    <section id="letter" class="letter-section">
+        <div class="container">
+            <h2>One Last Thing...</h2>
+            <div class="envelope-wrapper">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-front">
+                        <p>Open me ♡</p>
+                    </div>
+                    <div class="envelope-letter" id="envelopeLetter">
+                        <div class="letter-content">
+                            <p class="letter-greeting">My Dearest Yashica,</p>
+                            <p>As I sit down to write this, I'm thinking about all the little moments we've shared in just one month. The late-night conversations, the unexpected laughs, the comfortable silences—all of it has meant more to me than words can capture.</p>
+                            <p>You came into my life and changed it in the most beautiful way. You're not just someone I care about; you're someone I genuinely want to spend my time with, someone who makes ordinary days feel special.</p>
+                            <p>I appreciate your kindness, your humor, your compassion, and the way you see the world. I love how you listen, how you think, and how you make me feel like I matter. Even in just these 30 days, you've become someone incredibly important to me.</p>
+                            <p>I don't know what the future holds, but I know I want you in it. I'm excited about all the memories we're yet to make, all the conversations we'll have, and all the little moments that will become our story.</p>
+                            <p>Thank you for being you. Thank you for taking a chance on us. Thank you for making my life more colorful.</p>
+                            <p style="margin-top: 2rem;">Happy one month, Yashica. Here's to us, and to forever being this happy together.</p>
+                            <p style="font-weight: bold; margin-top: 1.5rem;">Forever yours,<br>Saksham ♡</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Screen -->
+    <section id="final" class="final-section">
+        <div class="hydrangea-final-decorations">
+            <svg class="hydrangea-large" viewBox="0 0 100 100" style="left: 2%; bottom: 5%;">
+                <g class="hydrangea-flower">
+                    <circle cx="30" cy="30" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="45" cy="20" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="60" cy="30" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="35" cy="50" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="55" cy="50" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="32" cy="65" r="4" fill="#DDA0DD" opacity="0.8"/>
+                    <circle cx="58" cy="65" r="4" fill="#DDA0DD" opacity="0.8"/>
+                    <circle cx="45" cy="40" r="3" fill="#FFFFFF" opacity="1"/>
+                </g>
+            </svg>
+            <svg class="hydrangea-large" viewBox="0 0 100 100" style="right: 2%; bottom: 5%;">
+                <g class="hydrangea-flower">
+                    <circle cx="30" cy="30" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="45" cy="20" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="60" cy="30" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="35" cy="50" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="55" cy="50" r="4" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="32" cy="65" r="4" fill="#DDA0DD" opacity="0.8"/>
+                    <circle cx="58" cy="65" r="4" fill="#DDA0DD" opacity="0.8"/>
+                    <circle cx="45" cy="40" r="3" fill="#FFFFFF" opacity="1"/>
+                </g>
+            </svg>
+        </div>
+        <div class="final-content">
+            <h1>One month down...</h1>
+            <p style="margin-top: 2rem;">...and so many more memories to make.</p>
+            <p style="margin-top: 3rem; font-size: 1.5rem; font-weight: bold;">Happy 1 Month, Yashica ♡</p>
+            <p style="margin-top: 1rem; font-style: italic;">Love, Saksham</p>
+        </div>
+    </section>
+
+    <!-- Hidden Easter Egg trigger area -->
+    <div class="easter-egg-trigger" id="easterEggTrigger"></div>
+
+    <!-- Easter Egg Modal -->
+    <div class="modal" id="easterEggModal">
+        <div class="modal-content easter-egg">
+            <h2>Okay... you found the secret secret.</h2>
+            <div class="celebration-particles" id="celebrationParticles"></div>
+            <p style="margin-top: 2rem;">Happy 1 Month, Yashica ♡</p>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bgMusic" loop>
+        <source src="assets/music/anniversary.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/main.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
