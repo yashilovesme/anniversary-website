@@ -52,8 +52,8 @@ body {
 }
 
 /* ===========================
-   MUSIC CONTROL
-   =========================== */
+    MUSIC CONTROL
+    =========================== */
 
 .music-control {
     position: fixed;
@@ -93,8 +93,8 @@ body {
 }
 
 /* ===========================
-   NAVIGATION
-   =========================== */
+    NAVIGATION
+    =========================== */
 
 .navbar {
     position: fixed;
@@ -210,8 +210,8 @@ body {
 }
 
 /* ===========================
-   HERO SECTION
-   =========================== */
+    HERO SECTION
+    =========================== */
 
 .hero {
     min-height: 100vh;
@@ -243,42 +243,64 @@ body {
     height: 100%;
     top: 0;
     left: 0;
+    pointer-events: none;
 }
 
 .hydrangea {
     position: absolute;
     width: 150px;
     height: 150px;
-    opacity: 0;
-    animation: hydrangeaBloom 3s ease-out forwards;
+    opacity: 0.85;
+    animation: hydrangeaBloom 2.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    filter: drop-shadow(0 4px 12px rgba(255, 182, 217, 0.4));
 }
 
 .hydrangea:nth-child(1) {
-    animation-delay: 0.5s;
+    animation-delay: 0.3s;
 }
 
 .hydrangea:nth-child(2) {
-    animation-delay: 1s;
+    animation-delay: 0.8s;
 }
 
 @keyframes hydrangeaBloom {
     0% {
         opacity: 0;
-        transform: scale(0.3);
+        transform: scale(0.2) rotate(-15deg);
+    }
+    50% {
+        opacity: 0.9;
     }
     100% {
-        opacity: 0.8;
-        transform: scale(1);
+        opacity: 0.85;
+        transform: scale(1) rotate(0deg);
     }
 }
 
 .hydrangea-flower {
     animation: gentleFloat 4s ease-in-out infinite;
+    transform-origin: center;
 }
 
 @keyframes gentleFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    0%, 100% { 
+        transform: translateY(0px);
+    }
+    50% { 
+        transform: translateY(-15px);
+    }
+}
+
+/* Add petal fall animation */
+@keyframes petalFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 .hero-content {
@@ -401,8 +423,8 @@ body {
 }
 
 /* ===========================
-   CONTAINER & GENERAL
-   =========================== */
+    CONTAINER & GENERAL
+    =========================== */
 
 .container {
     max-width: 1200px;
@@ -439,8 +461,8 @@ section h2::after {
 }
 
 /* ===========================
-   INTRODUCTION SECTION
-   =========================== */
+    INTRODUCTION SECTION
+    =========================== */
 
 #introduction {
     background: linear-gradient(135deg, rgba(255, 228, 245, 0.5) 0%, rgba(255, 240, 248, 0.5) 100%);
@@ -497,8 +519,8 @@ section h2::after {
 }
 
 /* ===========================
-   TIMELINE SECTION
-   =========================== */
+    TIMELINE SECTION
+    =========================== */
 
 #our-month {
     background: linear-gradient(135deg, rgba(230, 213, 230, 0.3) 0%, rgba(255, 240, 248, 0.3) 100%);
@@ -603,8 +625,8 @@ section h2::after {
 }
 
 /* ===========================
-   MODAL
-   =========================== */
+    MODAL
+    =========================== */
 
 .modal {
     display: none;
@@ -684,8 +706,8 @@ section h2::after {
 }
 
 /* ===========================
-   SCRAPBOOK / MEMORIES
-   =========================== */
+    SCRAPBOOK / MEMORIES
+    =========================== */
 
 #memories {
     background: linear-gradient(135deg, rgba(255, 182, 217, 0.1) 0%, rgba(230, 213, 230, 0.1) 100%);
@@ -745,8 +767,8 @@ section h2::after {
 }
 
 /* ===========================
-   GAMES SECTION
-   =========================== */
+    GAMES SECTION
+    =========================== */
 
 #games {
     background: linear-gradient(135deg, rgba(255, 240, 248, 0.5) 0%, rgba(255, 228, 245, 0.5) 100%);
@@ -910,8 +932,8 @@ section h2::after {
 }
 
 /* ===========================
-   SECRET SECTION
-   =========================== */
+    SECRET SECTION
+    =========================== */
 
 #secret {
     background: linear-gradient(135deg, rgba(230, 213, 230, 0.5) 0%, rgba(255, 240, 248, 0.5) 100%);
@@ -931,15 +953,17 @@ section h2::after {
     cursor: pointer;
     transition: all 0.3s ease;
     animation: secretFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 8px 16px rgba(255, 182, 217, 0.6));
 }
 
 .secret-flower:hover {
-    filter: drop-shadow(0 0 15px rgba(255, 182, 217, 0.8));
+    filter: drop-shadow(0 0 20px rgba(255, 182, 217, 1));
+    transform: scale(1.05);
 }
 
 @keyframes secretFloat {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-25px); }
 }
 
 .secret-hint {
@@ -959,8 +983,8 @@ section h2::after {
 }
 
 /* ===========================
-   LETTER SECTION
-   =========================== */
+    LETTER SECTION
+    =========================== */
 
 #letter {
     background: linear-gradient(135deg, rgba(255, 182, 217, 0.15) 0%, rgba(230, 213, 230, 0.15) 100%);
@@ -998,134 +1022,70 @@ section h2::after {
 }
 
 .envelope.opened .envelope-front {
-    opacity: 0;
-    pointer-events: none;
-    transform: rotateY(180deg);
+    transform: rotateX(60deg) translateZ(-20px);
 }
 
 .envelope-letter {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 500px;
-    background: var(--cream);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: var(--shadow-lg);
+    height: 100%;
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.5s ease;
-    max-height: 600px;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    padding: 2rem;
     overflow-y: auto;
 }
 
 .envelope.opened .envelope-letter {
     opacity: 1;
-    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .letter-content {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #333;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .letter-greeting {
-    font-family: var(--font-handwriting);
     font-size: 1.3rem;
-    color: var(--rose-pink);
+    font-weight: bold;
+    color: var(--deep-rose);
     margin-bottom: 1rem;
 }
 
-/* ===========================
-   FINAL SECTION
-   =========================== */
+.letter-content p {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
 
-#final {
+@media (max-width: 768px) {
+    .envelope {
+        height: 400px;
+    }
+}
+
+/* ===========================
+    FINAL SECTION
+    =========================== */
+
+.final-section {
+    background: linear-gradient(135deg, #FFE4F5 0%, #FFF0F8 100%);
+    text-align: center;
+    padding: 8rem 2rem;
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--baby-pink) 0%, var(--cream) 50%, #FFE4F5 100%);
-    position: relative;
-    text-align: center;
-    overflow: hidden;
 }
 
 .hydrangea-final-decorations {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.hydrangea-large {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    opacity: 0.7;
-    animation: hydrangeaBloom 3s ease-out forwards;
-}
-
-.hydrangea-large:nth-child(1) {
-    animation-delay: 0.5s;
-}
-
-.hydrangea-large:nth-child(2) {
-    animation-delay: 1s;
-}
-
-.final-content {
-    position: relative;
-    z-index: 10;
-    animation: fadeInUp 1s ease-out;
-}
-
-.final-content h1 {
-    font-size: 3rem;
-    color: var(--deep-rose);
-    margin-bottom: 1rem;
-    font-family: var(--font-display);
-}
-
-.final-content p {
-    font-size: 1.3rem;
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .final-content h1 {
-        font-size: 2rem;
-    }
-
-    .final-content p {
-        font-size: 1rem;
-    }
-
-    .hydrangea-large {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-/* ===========================
-   EASTER EGG
-   =========================== */
-
-.easter-egg-trigger {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    z-index: 1;
-}
-
-.easter-egg {
-    text-align: center;
-    overflow: hidden;
-}
-
-.celebration-particles {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1134,22 +1094,76 @@ section h2::after {
     pointer-events: none;
 }
 
-.celebration-particle {
+.hydrangea-large {
     position: absolute;
-    pointer-events: none;
-    animation: celebrationFall 2s ease-out forwards;
+    width: 200px;
+    height: 200px;
+    opacity: 0.7;
+    animation: hydrangeaBloom 3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    filter: drop-shadow(0 4px 16px rgba(255, 182, 217, 0.5));
 }
 
-@keyframes celebrationFall {
-    to {
-        opacity: 0;
-        transform: translateY(200px) rotate(360deg);
+.final-content {
+    position: relative;
+    z-index: 10;
+}
+
+.final-content h1 {
+    font-size: 3.5rem;
+    color: var(--deep-rose);
+    font-family: var(--font-display);
+    margin-bottom: 2rem;
+}
+
+.final-content p {
+    font-size: 1.3rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .final-section {
+        padding: 4rem 1rem;
+    }
+
+    .final-content h1 {
+        font-size: 2rem;
+    }
+
+    .hydrangea-large {
+        width: 120px;
+        height: 120px;
     }
 }
 
 /* ===========================
-   RESPONSIVE DESIGN
-   =========================== */
+    EASTER EGG
+    =========================== */
+
+.easter-egg-trigger {
+    position: fixed;
+    top: 90px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.easter-egg {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 182, 217, 0.9), rgba(255, 255, 255, 0.95));
+}
+
+.celebration-particles {
+    position: relative;
+    height: 100px;
+    margin: 1rem 0;
+}
+
+/* ===========================
+    RESPONSIVE ADJUSTMENTS
+    =========================== */
 
 @media (max-width: 1024px) {
     .container {
@@ -1159,21 +1173,24 @@ section h2::after {
     section {
         padding: 3rem 0;
     }
-
-    section h2 {
-        font-size: 2.5rem;
-    }
 }
 
-@media (max-width: 768px) {
-    .music-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 
     .message-container {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     .anniversary-message {
@@ -1184,48 +1201,7 @@ section h2::after {
         padding: 1.5rem;
     }
 
-    .modal-content {
-        padding: 2rem;
-    }
-
-    .envelope-letter {
-        max-height: 400px;
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    section {
-        padding: 2rem 0;
-    }
-
-    section h2 {
-        font-size: 1.8rem;
-    }
-
-    .container {
-        padding: 0 1rem;
-    }
-
-    .message-container {
-        padding: 1.5rem;
-    }
-
-    .game-stats {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .modal-content {
-        padding: 1.5rem;
-        width: 95%;
+    .scrapbook-container {
+        grid-template-columns: 1fr;
     }
 }
